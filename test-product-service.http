@@ -1,0 +1,5 @@
+# Test the product-service
+
+### Get list of products
+GET http://product-service-lab3-f9gnancec6bzf9hw.canadacentral-01.azurewebsites.net/products
+Accept: application/json

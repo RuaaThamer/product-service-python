@@ -2,12 +2,13 @@ import os
 import pika
 from flask import Flask, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
 
 # Use your VM's public IP and the admin credentials you set up earlier
-RABBITMQ_URL = os.environ.get('RABBITMQ_URL', 'amqp://admin:Ruaa123!@20.220.228.16:5672/')
+RABBITMQ_URL = os.environ.get('RABBITMQ_URL', 'amqp://admin:123@20.220.228.16:5672/')
 
 @app.route('/products', methods=['GET'])
 def get_products():
