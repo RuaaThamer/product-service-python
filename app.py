@@ -5,7 +5,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://delightful-grass-0f3dc1c10.1.azurestaticapps.net"}})
 
 # Use your VM's public IP and the admin credentials you set up earlier
 RABBITMQ_URL = os.environ.get('RABBITMQ_URL', 'amqp://admin:123@20.220.228.16:5672/')
